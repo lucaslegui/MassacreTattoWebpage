@@ -1,0 +1,9 @@
+hero con imagen
+servicios > tattoo, pircing, perforaciones, body esculture
+galeria de imagenes
+artistas
+contacto
+footer
+
+font: Inter, disenada para la web, multilenguaje y muchos pesos y variaciones
+gothic One, para el logo
