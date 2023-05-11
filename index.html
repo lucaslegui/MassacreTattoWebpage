@@ -2,21 +2,30 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/favicon-32x32.png" type="image/x-icon">
   <!-- css -->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="style.css">
   <title>Massacre Tattoo Studio</title>
 </head>
 
 <body>
+
   <header class="hero">
     <nav class="nav container">
       <div class="logo">
-        <img src="assets/logo.png" alt="logo Massacre Tattoo" />
+        <img src="assets/logo.png" alt="logo Massacre Tattoo">
       </div>
+
+      
+      <label for="menu" class="nav_label">
+      <img src="assets/menu.svg" alt="icono menu hamburguesa" class="nav-img-hamburguesa">
+      </label>
+      <input type="checkbox" id="menu" class="nav_input">
+      
 
       <ul class="nav-links">
         <li><a href="#">INICIO</a></li>
@@ -24,11 +33,7 @@
         <li><a href="#">FOTOS</a></li>
         <li><a href="#">ARTISTAS</a></li>
         <li><a href="#">CONTACTO</a></li>
-        <img src="assets/close.svg" alt="icono cerrar" class="nav-img-close" />
       </ul>
-      <div class="nav-menu">
-        <img src="assets/menu.svg" alt="icono menu hamburguesa" class="nav-img-hamburguesa" />
-      </div>
     </nav>
 
     <div class="banner container">
@@ -45,10 +50,10 @@
 
   <main>
     <section class="servicios">
-      <div class="presentacion-servicios container">
+      <div class="presentacion-servicios">
         <h2>NUESTROS SERVICIOS</h2>
       </div>
-      <article class="cards">
+      <article class="cards container">
         <div class="card">
           <img src="assets/tattoo.png" alt="maquina de tatuar dibujo" class="img-cards">
           <div class="detalles">
@@ -99,7 +104,7 @@
       <div class="presentacion-servicios container">
         <h2>ALGUNOS DE NUESTROS TRABAJOS</h2>
       </div>
-      <article class="gallery container">
+      <article class="gallery">
         <div class="gallery-item">
           <img src="assets/tattoos-img/tatto1.webp" alt="tatuaje dragon">
         </div>
@@ -121,7 +126,7 @@
       </article>
     </section>
 
-    <section class="artistas">
+    <section class="artistas container">
       <div class="presentacion-servicios container">
         <h2>STAFF</h2>
       </div>
@@ -155,7 +160,32 @@
 
     </section>
 
-    <section class="contacto"></section>
+    <section class="historia container">
+      <div class="presentacion-servicios">
+        <h2>Sobre Nosotros</h2>
+      </div>
+      <article class="nuestraHistoria">
+        <p> <span>E</span>n 1990, en una pequeña ciudad llena de arte y pasión, nació un estudio de tatuajes que cambiaría la forma en que las personas ven y experimentan el arte corporal. "Massacre Tattoo Studio" fue fundado por un grupo de entusiastas del arte corporal que buscaban desafiar las convenciones y elevar la calidad y la creatividad en el mundo del tatuaje. Desde entonces, el estudio ha crecido y evolucionado, pero siempre ha mantenido su espíritu original y su enfoque en la innovación.</p>
+        <p>
+          Desde el principio, Massacre Tattoo Studio se ha enorgullecido de ofrecer una amplia variedad de servicios a sus clientes. No solo se especializan en tatuajes de alta calidad y personalizados, sino que también ofrecen servicios de piercing, borrado de tatuajes con láser y modificaciones corporales. Esta diversidad de habilidades y técnicas les permite satisfacer las necesidades y deseos únicos de cada cliente que visita su estudio.
+        </p>
+        <p>
+          A lo largo de los años, Massacre Tattoo Studio ha atraído a talentosos artistas del tatuaje y profesionales de modificaciones corporales de todo el mundo. Estos artistas aportan una gran variedad de estilos y enfoques al estudio, asegurando que siempre haya alguien disponible para crear el diseño perfecto para cada cliente. Ya sea un tatuaje tradicional, un diseño tribal, o incluso una pieza de arte abstracto, Massacre Tattoo Studio tiene a un artista que puede hacer realidad cualquier sueño.
+        </p>
+        <p>
+          Una parte fundamental de la filosofía de Massacre Tattoo Studio es la creencia en la importancia de la educación y la innovación en la industria del tatuaje. Siempre están buscando nuevas técnicas y enfoques para mejorar su trabajo y garantizar la seguridad y satisfacción de sus clientes. Por ejemplo, han sido pioneros en la adopción de tecnologías de borrado de tatuajes con láser, lo que les permite ofrecer a sus clientes una forma efectiva y segura de eliminar tatuajes no deseados o antiguos
+        </p>
+        <p>
+          El estudio también se ha hecho un nombre en el campo de las modificaciones corporales. Desde piercings simples hasta implantes subdérmicos y bifurcación de la lengua, Massacre Tattoo Studio está siempre a la vanguardia de las últimas tendencias y técnicas en el mundo de las modificaciones corporales. Su enfoque innovador y su compromiso con la seguridad y la calidad han ayudado a establecerlos como líderes en la industria.
+        </p>
+        <p>
+          A medida que Massacre Tattoo Studio celebra más de tres décadas de éxito, sigue siendo un faro de creatividad e innovación en el mundo del arte corporal. A través de su compromiso con la excelencia en el diseño y la técnica, así como su dedicación a la satisfacción del cliente, han logrado dejar una marca indeleble en la industria del tatuaje. No importa lo que el futuro les depare, Massacre Tattoo Studio continuará siendo un lugar donde el arte, la pasión y la habilidad se unen para crear obras maestras en la piel.
+        </p>
+        <div class="video">
+          <iframe width="660" height="415" src="https://www.youtube.com/embed/uCt5eZDmN6s?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+      </article>
+    </section>
   </main>
   <footer></footer>
   <div class="scrips"></div>

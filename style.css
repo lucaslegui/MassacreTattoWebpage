@@ -57,14 +57,25 @@ h2 {
   background-size: cover;
   clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
   z-index: -1;
+  padding: 0;
 }
 
 /* nav */
 nav {
   --pading-container: 0;
-  height: 100%;
+  /* height: 200px; */
   display: flex;
   align-items: center;
+}
+nav .logo img {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.nav_label,
+#menu {
+  display: none;
 }
 
 .nav-links {
@@ -82,25 +93,43 @@ nav {
   color: aliceblue;
 }
 
-.nav-img-close {
-  display: var(--show, none);
-}
-
-.nav-menu {
-  margin-left: auto;
-  cursor: pointer;
-  display: none;
+.nav-links a:hover {
+  display: block;
+  background-color: blueviolet;
 }
 
 .nav-img-hamburguesa {
   display: block;
+  margin-left: auto;
   width: 30px;
 }
 
-nav .logo img {
-  display: block;
-  width: 100%;
-  padding-top: 10px;
+@media (max-width: 700px) {
+  nav {
+    justify-content: space-between;
+  }
+  .nav_label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 120px;
+    bottom: 0;
+    background: red;
+    width: 100%;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    clip-path: circle(0 at center);
+  }
+
+  .nav_input:checked + .nav-links {
+    clip-path: circle(100% at center);
+  }
 }
 
 /* banner */
@@ -141,15 +170,15 @@ nav .logo img {
   height: fit-content;
   margin-top: 40px;
   transition: 400ms ease-in-out;
-  margin-bottom: 80px;
+  /* margin-bottom: 80px; */
 }
 .presentacion-servicios {
   color: aliceblue;
-  /* text-align: center; */
-  padding: 100px;
-  /* font-size: 2rem; */
+  text-align: center;
 }
 .cards {
+  max-width: 900px;
+  /* height: 90vh; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +187,7 @@ nav .logo img {
 
 .card {
   height: 200px;
-  width: 240px;
+  width: 200px;
   background-color: rgb(185, 204, 221);
   display: flex;
   justify-content: center;
@@ -229,7 +258,7 @@ nav .logo img {
 .gallery-item img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 400px;
   object-fit: cover;
   transition: transform 0.5s;
 }
@@ -242,69 +271,103 @@ nav .logo img {
 
 .staff {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 5px;
-  padding: 20px;
-  overflow-x: auto;
 }
 
 .staff-member {
-  background-color: rgb(185, 204, 221);
+  width: 300px;
+  margin: 20px;
+  box-shadow: 0 0 10px rgb(255, 9, 9);
+  overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  min-width: 50px;
-  max-width: 300px;
-  padding: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .staff-member img {
   width: 100%;
   height: 300px;
-  border-radius: 5px;
-  margin-bottom: 10px;
-  opacity: .4;
-  transition: .5s ease;
+  object-fit: cover;
 }
 
 .staff-member h3,
-.staff-member p {
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.card:hover {
-  flex-grow: 1;
-}
-
-.staff-member:hover img,
-.staff-member:hover h3,
-.staff-member:hover p {
-  opacity: 1;
-  filter: contrast(120%);
+p {
+  color: aliceblue;
 }
 
 .staff-member h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
   margin-bottom: 10px;
 }
 
 .staff-member p {
-  font-size: 14px;
   line-height: 1.5;
+  margin-bottom: 20px;
 }
 
+/* HISTORIA */
+
+.nuestraHistoria{
+  margin-top: 30px;
+}
+
+.nuestraHistoria p{
+  color: aliceblue;
+  margin-bottom: 20px;
+
+}
+
+.nuestraHistoria p::first-letter{
+  font-size: 1.5rem;
+}
+
+.video{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.video iframe{
+  border: 3px solid red;
+}
 
 /* MEDIA QUERYS */
 
 /* tablet */
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 768px) {
+  .cards {
+    max-width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .card {
+    margin-top: 90px;
+  }
+}
+
+/* mobile */
+
+@media screen and (max-width: 480px) {
+  .hero {
+    grid-template-rows: 100px 1fr;
+  }
+
+  .container {
+    padding: 50px 0;
+  }
+
+  .banner h1 {
+    font-size: 2rem;
+  }
+
+  .text-menu {
+    margin-bottom: 20px;
+  }
+
   .cards {
     display: flex;
     justify-content: center;
@@ -318,36 +381,4 @@ nav .logo img {
   .gallery-item {
     flex-basis: calc(50% - 10px);
   }
-
-  /* .staff{
-    width: 500px;
-    margin: 0 auto;
-  } */
-}
-
-/* mobile */
-
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .container {
-    padding: 0;
-    margin: 50px;
-  }
-  .gallery-item {
-    flex-basis: 100%;
-  }
-
-  .cards {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-  }
-
-  .card {
-    margin-top: 90px;
-  }
-
-  /* .staff{
-    width: auto;
-    height: 430px;
-  } */
 }
